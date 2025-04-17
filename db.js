@@ -1,0 +1,1 @@
+console.log('This is the file to setup connection b/w server and MongoDb server')
