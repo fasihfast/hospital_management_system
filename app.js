@@ -4,7 +4,8 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";    
 import messageRouter from "./Routers/messageRouter.js"
-
+import userRouter from "./Routers/userRouter.js"
+import  {errorMiddleware}  from "./middlewares/errorMiddleware.js";
 import { dbconnection } from "./db.js";    
 
 
@@ -28,8 +29,13 @@ app.use(fileUpload({
     tempFileDir:"/tmp/"
 }))
 
+
+
 app.use("/api/v1",messageRouter);
+app.use("/api/v1",userRouter)
+
+
 
 dbconnection();
-
+app.use(errorMiddleware);
 export default app;
