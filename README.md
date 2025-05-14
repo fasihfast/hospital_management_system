@@ -1,4 +1,4 @@
 # hospital_management_system
-This is a full stack project for to manage patients appointments and doctors availability. It contains a dashboard to manage all the functionality
+This is a backend based projects  to manage patients appointments and doctors availability.
 <br>
 author- Muhammad Fasih
